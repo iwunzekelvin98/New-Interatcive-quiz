@@ -1,0 +1,19 @@
+
+
+/*Background Colour*/
+body {
+    background-color: #916CF5;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.quiz-word-in-title {
+    color: #FFEEB6;
+    margin-right:10px;
+}
+.time-word-in-title {
+    color: #FFFFFF;
+}
+
