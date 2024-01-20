@@ -24,8 +24,16 @@ display:flex;
 }
 #quiz-container {
     border: 2px solid; /* Border color and thickness */
-    padding: 100px;
+    padding: 60px;
     border-radius: 10px; /* Optional: Add rounded corners */
-    background-color: #fff; /* 
+    background-color: #fff; 
+    text-align: center;
+}
+.quiz-options {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #FFEEB6;
+    width: 170px;
 }
 
