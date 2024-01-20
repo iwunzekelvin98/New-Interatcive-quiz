@@ -26,8 +26,11 @@ display:flex;
     border: 2px solid; /* Border color and thickness */
     padding: 60px;
     border-radius: 10px; /* Optional: Add rounded corners */
-    background-color: #fff; 
+    background-color: #fff;
     text-align: center;
+    overflow: auto;
+    width: 120px;
+    height:80px;
 }
 .quiz-options {
     margin-top: 20px;
