@@ -3,17 +3,29 @@
 /*Background Colour*/
 body {
     background-color: #916CF5;
-    display:flex;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 0;
+}
+
+#title-container {
+display:flex;
 }
 
 .quiz-word-in-title {
     color: #FFEEB6;
     margin-right:10px;
+    font-size:50px
 }
 .time-word-in-title {
     color: #FFFFFF;
+    font-size: 50px
+}
+#quiz-container {
+    border: 2px solid; /* Border color and thickness */
+    padding: 100px;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    background-color: #fff; /* 
 }
 
