@@ -39,4 +39,18 @@ display:flex;
     background-color: #FFEEB6;
     width: 170px;
 }
+#navigation-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px; /* Add margin to create space between the buttons and the content */
+    width: 50%;
+}
+#previous-button,
+#next-button {
+    padding: 20px;
+    border: 1px solid #000;
+    background-color: #FFEEB6;
+    width:50px; 
+}
 

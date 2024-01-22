@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const quizContainer = document.getElementById('quiz-container');
     const optionElements = document.querySelectorAll('.quiz-options');
+    const navigationButtons = document.getElementById('navigation-buttons') 
+    const nextButton = document.getElementById('next-button')
+    const previousButton = document.getElementById('previous-button')
 
     optionElements.forEach(option => {
         option.addEventListener('click', () => {
