@@ -29,6 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
              };
         });
     }; 
+        previousButton.addEventListener('mouseover', () => {
+            previousButton.style.backgroundColor = '#FCBB65'; 
+        });
+         previousButton.addEventListener('mouseout', () => {
+            previousButton.style.backgroundColor = '';
+        });
+        nextButton.addEventListener('mouseover', () => {
+            nextButton.style.backgroundColor = '#FCBB65';
+        });
+        nextButton.addEventListener('mouseout', () => {
+            nextButton.style.backgroundColor = '';
+        });
+    
 });
 
 
