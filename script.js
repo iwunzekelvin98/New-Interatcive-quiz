@@ -8,7 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentQuestion = 0;
     let quizData;
 
-    fetch 
+    fetch(quizData.json)
+        .then(response => response.json())
+        .then(data => {
+            quizData = data;
+            displayQuestion(currentQuestion);
+        })
+        .catch(error => console.error('Error Fetching the Quiz Data', error));
 
     optionElements.forEach(option => {
         option.addEventListener('click', () => {
@@ -21,7 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
             option.style.backgroundColor = '';
         });
     });
+    function displayQuestion(){
 
+
+    };
     function checkAnswer(selectedOption) {
         const correctAnswer = 'C) Skin';
        optionElements.forEach(option => {
