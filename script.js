@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextButton = document.getElementById('next-button')
     const previousButton = document.getElementById('previous-button')
 
+    let currentQuestion = 0;
+    let quizData;
+
+    fetch 
+
     optionElements.forEach(option => {
         option.addEventListener('click', () => {
             checkAnswer(option.textContent);

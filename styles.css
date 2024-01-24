@@ -22,7 +22,8 @@ display:flex;
     color: #FFFFFF;
     font-size: 50px
 }
-#quiz-container {
+
+#question {
     border: 2px solid; /* Border color and thickness */
     padding: 60px;
     border-radius: 10px; /* Optional: Add rounded corners */
@@ -30,9 +31,13 @@ display:flex;
     text-align: center;
     overflow: auto;
     width: 120px;
-    height:80px;
+    height: 80px;
 }
-.quiz-options {
+#options{
+    list-style: none;
+}
+.quiz-option {
+    
     margin-top: 20px;
     padding: 10px;
     border-radius: 10px;
