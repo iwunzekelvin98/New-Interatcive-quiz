@@ -10,14 +10,15 @@ body {
 }
 
 #title-container {
-display:flex;
+    display: flex;
 }
 
 .quiz-word-in-title {
     color: #FFEEB6;
-    margin-right:10px;
-    font-size:50px
+    margin-right: 10px;
+    font-size: 50px
 }
+
 .time-word-in-title {
     color: #FFFFFF;
     font-size: 50px
@@ -33,17 +34,19 @@ display:flex;
     width: 120px;
     height: 80px;
 }
-#options{
+
+#options {
     list-style: none;
 }
+
 .quiz-option {
-    
     margin-top: 20px;
     padding: 10px;
     border-radius: 10px;
     background-color: #FFEEB6;
     width: 170px;
 }
+
 #navigation-buttons {
     display: flex;
     flex-direction: row;
@@ -51,11 +54,11 @@ display:flex;
     margin-top: 20px; /* Add margin to create space between the buttons and the content */
     width: 50%;
 }
+
 #previous-button,
 #next-button {
     padding: 20px;
     border: 1px solid #000;
     background-color: #FFEEB6;
-    width:50px; 
+    width: 50px;
 }
-

@@ -1,14 +1,17 @@
 [
   {
+    "question": "What is the largest organ in the human body?",
+    "options": [ "Heart", "Liver", "Skin" ],
+    "correctAnswer": "Skin"
+  },
+  {
     "question": "What is the capital of France?",
-    "options": [ "A) Paris", "B) London", "C) Berlin" ],
-    "correctAnswer": "A) Paris"
+    "options": [ "Paris", "London", "Berlin" ],
+    "correctAnswer": "Paris"
   },
   {
     "question": "Which planet is known as the Red Planet?",
-    "options": [ "A) Mars", "B) Jupiter", "C) Venus" ],
-    "correctAnswer": "A) Mars"
+    "options": [ "Mars", "Jupiter", "Venus" ],
+    "correctAnswer": "Mars"
   }
-
 ]
-  
