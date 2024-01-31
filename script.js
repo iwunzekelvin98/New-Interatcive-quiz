@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const quizContainer = document.getElementById('quiz-container');
-    const optionElements = document.querySelectorAll('.quiz-option');
-    const navigationButtons = document.getElementById('navigation-buttons')
-    const nextButton = document.getElementById('next-button')
-    const previousButton = document.getElementById('previous-button')
+    const optionsList = document.getElementById('options');
+    const navigationButtons = document.getElementById('navigation-buttons');
+    const nextButton = document.getElementById('next-button');
+    const previousButton = document.getElementById('previous-button');
 
     let currentQuestion = 0;
     let quizData;
@@ -16,11 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error('Error Fetching the Quiz Data', error));
 
-
     function displayQuestion(questionIndex) {
         const currentQuizData = quizData[questionIndex];
         const questionElement = document.getElementById('question');
-        const optionsList = document.getElementById('options');
 
         questionElement.textContent = currentQuizData.question;
 
@@ -37,28 +35,47 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function checkAnswer(selectedOption) {
-        const correctAnswer = quizData[currentQuestion].correctAnswer;
-        optionElements.forEach(option => {
-            if (option.textContent.trim() === selectedOption) {
-                if (selectedOption === correctAnswer) {
-                    option.style.backgroundColor = '#00FF00'; // Green for correct answer
-                } else {
-                    option.style.backgroundColor = '#FF0000'; // Red for incorrect answer 
-                }
-            };
-        });
-    };
+        if (!quizData) {
+            console.error('Quiz data not loaded yet');
+            return;
+        }
 
-    optionElements.forEach(option => {
-        option.addEventListener('click', () => {
-            checkAnswer(option.textContent);
-        });
-        option.addEventListener('mouseover', () => {
-            option.style.backgroundColor = '#FCBB65';
-        });
-        option.addEventListener('mouseout', () => {
-            option.style.backgroundColor = '';
-        });
+        const correctAnswer = quizData[currentQuestion].correctAnswer;
+
+        if (selectedOption === correctAnswer) {
+            // Change the selected option color to green for correct answer
+            optionsList.querySelectorAll('.quiz-option').forEach(option => {
+                if (option.textContent.trim() === selectedOption) {
+                    option.style.backgroundColor = '#00FF00';
+                }
+            });
+        } else {
+            // Change the selected option color to red for incorrect answer
+            optionsList.querySelectorAll('.quiz-option').forEach(option => {
+                if (option.textContent.trim() === selectedOption) {
+                    option.style.backgroundColor = '#FF0000';
+                }
+            });
+        }
+    }
+
+    optionsList.addEventListener('click', (event) => {
+        if (event.target.tagName === 'LI') {
+            const selectedOption = event.target.textContent.trim();
+            checkAnswer(selectedOption);
+        }
+    });
+
+    optionsList.addEventListener('mouseover', (event) => {
+        if (event.target.tagName === 'LI') {
+            event.target.style.backgroundColor = '#FCBB65';
+        }
+    });
+
+    optionsList.addEventListener('mouseout', (event) => {
+        if (event.target.tagName === 'LI') {
+            event.target.style.backgroundColor = '';
+        }
     });
 
     previousButton.addEventListener('click', () => {
